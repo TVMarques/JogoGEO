@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="index.css">
+
+        <!--##JQury: CDN Google-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <script>
+            var pontos = 0; //A variável serve para armazenar um valor da memória enquanto o jogo estiver rodando.
+
+            $(document).ready(function(){
+                $(".correta").click(function(){//Toda vez que clicar na opção correta
+                    $(".alternativas").hide();//As alternativas somem.
+                    $(".centro").hide();//O centro também
+                    $(".falha").hide();//A falha fica oculta
+                    $(".verificado").show();//O checkin de acerto é mostrado
+                    pontos++; //Incrementa o valor de pontos
+                    $(".continuar").show();//Mostra a opção para mudar de fase.
+                    $("#pontos").html(pontos);//Mostra os pontos increntados
+                });
+
+                $(".incorreta").click(function(){//Toda vez que clicar na opção incorreta, faz o oposto de correta
+                    $(".alternativas").hide();
+                    $(".centro").hide();
+                    $(".falha").show();
+                    $(".verificado").hide();
+                    $(".continuar").show();
+                });
+
+                $(".para-questao2").click(function(){//Para ir para a próxima questão
+                    $("#questao1").hide();//Oculte a anterior
+                    $("#questao2").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao3").click(function(){//Para ir para a próxima questão
+                    $("#questao2").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao3").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao4").click(function(){//Para ir para a próxima questão
+                    $("#questao3").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao4").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao5").click(function(){//Para ir para a próxima questão
+                    $("#questao4").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao5").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao6").click(function(){//Para ir para a próxima questão
+                    $("#questao5").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao6").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao7").click(function(){//Para ir para a próxima questão
+                    $("#questao6").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao7").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao8").click(function(){//Para ir para a próxima questão
+                    $("#questao7").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao8").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao9").click(function(){//Para ir para a próxima questão
+                    $("#questao8").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao9").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".para-questao10").click(function(){//Para ir para a próxima questão
+                    $("#questao9").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao10").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                });
+
+                $(".finalizar").click(function(){
+                    $("#questao10").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#final").show();//Mostre a atual
+                    $(".alternativas").hide();//Mostre as alternativas atuais
+                    $(".centro").hide();//Mostre o centro com o nome do estado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                    $("#resultado").show();
+                    $("#resultado").html(pontos);
+                });
+
+                $(".recomecar").click(function(){
+                    $("#final").hide();//Oculte a anterior, pois antes dessa já está oculta
+                    $("#questao1").show();//Mostre a atual
+                    $(".alternativas").show();//Mostre as alternativas atuais
+                    $(".centro").show();//Mostre o centro com a palavra resultado
+                    $(".falha").hide();//Esconda a falha
+                    $(".verificado").hide();//Esconda o Verificado
+                    $(".continuar").hide();//Esconda o continuar
+                    $("#pontos").html(pontos = 0);
+                });
+            });
+        </script>
+
+        <title>GEO QUIZ</title>
+    </head>
+    <body>
+
+        <header class="row fixed-top bg-dark justify-content-between">
+            <div class="col-4">GEO QUIZ</div>
+            <div class="col-4">Pontos: <span id="pontos">0</span></div>
+        </header>
+        
+        <main role="main">
+
+            <!--Questão 1-->
+            <section id="questao1">
+                <div class="alternativas row">
+                <div class="incorreta"><img src="/public/assets/images/rs-mapa.avif"></div>
+                <div class="correta"><img src="/public/assets/images/ac-mapa.jpg"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="centro">ACRE</div>
+                        <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                        <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                        <p class="continuar para-questao2">Continuar</p>
+                    </div>
+
+                    <div class="alternativas row ">
+                        <div class="incorreta esp2"><img src="/public/assets/images/ba-mapa.avif"></div>
+                        <div class="incorreta esp"><img src="/public/assets/images/ce-mapa.avif"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Questão 2-->
+            <section id="questao2">
+                <div class="alternativas row">
+                <div class="incorreta"><img src="/public/assets/images/go-mapa.jpg"></div>
+                <div class="incorreta"><img src="/public/assets/images/ac-mapa.jpg"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="centro">RIO GRANDE DO SUL</div>
+                        <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                        <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                        <p class="continuar para-questao3">Continuar</p>
+                    </div>
+
+                    <div class="alternativas row">
+                        <div class="correta esp2"><img src="/public/assets/images/rs-mapa.avif"></div>
+                        <div class="incorreta esp"><img src="/public/assets/images/mg-mapa.avif"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--Qustão 3-->
+            <section id="questao3">
+                <div class="alternativas row">
+                <div class="incorreta"><img src="/public/assets/images/sc-mapa.avif"></div>
+                <div class="incorreta"><img src="/public/assets/images/am-mapa.avif"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="centro">GOIÁS</div>
+                        <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                        <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                        <p class="continuar para-questao4">Continuar</p>
+                    </div>
+
+                    <div class="alternativas row">
+                        <div class="incorreta esp2"><img src="/public/assets/images/to.avif"></div>
+                        <div class="correta esp"><img src="/public/assets/images/go-mapa.jpg"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Questão 4-->
+            <section id="questao4">
+                <div class="alternativas row">
+                <div class="correta"><img src="/public/assets/images/ms-mapa.jpg"></div>
+                <div class="incorreta"><img src="/public/assets/images/go-mapa.jpg"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="centro">MATO GROSSO DO SUL</div>
+                        <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                        <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                        <p class="continuar para-questao5">Continuar</p>
+                    </div>
+
+                    <div class="alternativas row">
+                        <div class="incorreta esp2"><img src="/public/assets/images/mt-mapa.png"></div>
+                        <div class="incorreta esp"><img src="/public/assets/images/ce-mapa.avif"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Quetão 5-->
+            <section id="questao5">
+                <div class="alternativas row">
+                <div class="incorreta"><img src="/public/assets/images/rs-mapa.avif"></div>
+                <div class="correta"><img src="/public/assets/images/pr-mapa.avif"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="centro">PARANÁ</div>
+                        <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                        <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                        <p class="continuar para-questao6">Continuar</p>
+                    </div>
+
+                    <div class="alternativas row">
+                        <div class="incorreta esp2"><img src="/public/assets/images/sc-mapa.avif"></div>
+                        <div class="incorreta esp"><img src="/public/assets/images/al-mapa.avif"></div>
+                    </div>
+                </div>
+            </section>
+
+        <!--Questão 6-->
+        <section id="questao6">
+            <div class="alternativas row">
+            <div class="incorreta"><img src="/public/assets/images/pb-mapa.avif"></div>
+            <div class="incorreta"><img src="/public/assets/images/ac-mapa.jpg"></div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="centro">ESPÍRITO SANTO</div>
+                    <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                    <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                    <p class="continuar para-questao7">Continuar</p>
+                </div>
+
+                <div class="alternativas row">
+                    <div class="incorreta esp2"><img src="/public/assets/images/rj-mapa.avif"></div>
+                    <div class="correta esp"><img src="/public/assets/images/es-mapa.avif"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Qustão 7-->
+        <section id="questao7">
+            <div class="alternativas row">
+            <div class="correta"><img src="/public/assets/images/rr-mapa.avif"></div>
+            <div class="incorreta"><img src="/public/assets/images/ro-mapa.jpg"></div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="centro">RORÁIMA</div>
+                    <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                    <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                    <p class="continuar para-questao8">Continuar</p>
+                </div>
+
+                <div class="alternativas row">
+                    <div class="incorreta esp2"><img src="/public/assets/images/am-mapa.avif"></div>
+                    <div class="incorreta esp"><img src="/public/assets/images/ce-mapa.avif"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Questão 8-->
+        <section id="questao8">
+            <div class="alternativas row">
+            <div class="incorreta"><img src="/public/assets/images/rs-mapa.avif"></div>
+            <div class="incorreta"><img src="/public/assets/images/mg-mapa.avif"></div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="centro">SÃO PAULO</div>
+                    <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                    <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                    <p class="continuar para-questao9">Continuar</p>
+                </div>
+
+                <div class="alternativas row">
+                    <div class="incorreta esp2"><img src="/public/assets/images/ma-mapa.avif"></div>
+                    <div class="correta esp"><img src="/public/assets/images/sp-mapa.avif"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Questão 9-->
+        <section id="questao9">
+            <div class="alternativas row">
+            <div class="incorreta"><img src="/public/assets/images/rs-mapa.avif"></div>
+            <div class="incorreta"><img src="/public/assets/images/pr-mapa.avif"></div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="centro">RIO GRANDE DO NORTE</div>
+                    <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                    <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                    <p class="continuar para-questao10">Continuar</p>
+                </div>
+
+                <div class="alternativas row">
+                    <div class="correta esp2"><img src="/public/assets/images/rn-mapa.avif"></div>
+                    <div class="incorreta esp"><img src="/public/assets/images/pb-mapa.avif"></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Questão 10-->
+        <section id="questao10">
+            <div class="alternativas row">
+            <div class="incorreta"><img src="/public/assets/images/se-mapa.avif"></div>
+            <div class="correta"><img src="/public/assets/images/df.webp"></div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="centro">DF</div>
+                    <div class="verificado">&#10004;</div><!--O código &#10004; é uma entidade HTML que representa o caractere ✔-->
+                    <div class="falha">&times;</div><!--O código &times; é uma entidade HTML que representa o símbolo de multiplicação ×-->
+                    <p class="continuar finalizar">Ver resultado</p>
+                </div>
+
+                <div class="alternativas row">
+                    <div class="incorreta esp2"><img src="/public/assets/images/es-mapa.avif"></div>
+                    <div class="incorreta esp"><img src="/public/assets/images/pi-mapa.avif"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="final">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="centro">RESULTADO</div>
+                    <p class="h3">Pontos: <span id="resultado"></span></p>
+                </div>
+                <p class="recomecar">Reinício</p>
+            </div>
+
+        </section>
+
+        </main>
+        <div id="alerta-mobile" class="row">
+            <p class="h3">Este layout foi projetado para mobile. Por favor, acesse do seu smartphone.</p>
+        </div>
+
+
+        <!-- JavaScript (Opcional) -->
+        <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,128 @@
+html, body, div, img, span, p , header, main, section, .row{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    background-color: #f7b934;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p, header div{
+    
+    padding: 8px;
+    font-weight: bold;/*O comando font-weight: bold; em CSS é utilizado para tornar o texto mais pesado ou forte*/
+    color: white;
+}
+
+main, #alerta-mobile{
+    margin-top: 54px !important;/*A presença de !important faz com que essa regra tenha prioridade máxima*/
+    height: 90%;
+}
+
+section{
+    width: 100%;
+    height: 90%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.centro{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    width: 160px;
+    margin: 76px;
+    text-align: center;
+}
+
+.alternativas{
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+   
+   
+}
+
+.esp{
+    position: relative;
+    left: 15px;
+}
+
+.esp2{
+    position: relative;
+    right: 14px;
+}
+
+.alternativas img {
+    width: 130px;
+    height: 120px;
+    justify-content: center;
+
+}
+
+.verificado, .falha{
+    display: none;
+    background-color: white;
+    height: 160px;
+    line-height: 160px;
+    border-radius: 120px;
+    width: 160px;
+    margin: 32px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    align-items: center;
+}
+
+.verificado{
+    margin-left: 78px;
+    color: green;
+}
+.falha{
+    margin-left: 78px;
+    color:red;
+}
+
+#questao2, #questao3, #questao4, #questao5, #questao6, #questao7, #questao8, #questao9, #questao10, #final{
+    display: none;
+}
+
+.continuar, .finalizar{
+    display: none;
+    align-items: center;
+}
+
+.continuar{
+    margin-left: 110px;
+}
+
+.finalizar{
+    margin-left: 101px;
+}
+
+.recomecar{
+    margin-left: 115px;
+    font-size: 18px;
+}
+
+@media (min-width: 992px){/*Quando a tela for no mínimo 992px, o main não poderá ser mostrado e o alerta deve ser emitido*/
+    main{ 
+        display: none;
+    }
+    #alerta-mobile{ 
+        display: block;
+    }
+}
+
+@media(max-width: 991px){
+    #alerta-mobile{
+        display: none;
+    }
+}
